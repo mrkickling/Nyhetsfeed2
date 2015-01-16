@@ -1,0 +1,1 @@
+This is a project where I will try to make a news feed that fetches data from a server (superfisk.nu) and then displays a news feed in the phone. If it works I can sell this product to my father:)
