@@ -1,9 +1,24 @@
 local composer = require( "composer" )
+local widget = require("widget")
 local scene = composer.newScene()
 
 function scene:create( event )
-    print("Creating scene 'newsfeed'")
     local sceneGroup = self.view
+    print("Creating scene 'newsfeed'")
+
+        local scrollView = widget.newScrollView
+    {
+        top = H*0.1,
+        left = 0,
+        width = W,
+        height = H*0.8,
+    }
+    local scrollBg = display.newRect( 100, 100, 100, 100 )
+    scrollBg:setFillColor( 0.6,0.6,0.6 )
+    scrollView:insert( scrollBg )
+
+
+    sceneGroup:insert(scrollView)
 
     -- Initialize the scene here.
     -- Example: add display objects to "sceneGroup", add touch listeners, etc.
